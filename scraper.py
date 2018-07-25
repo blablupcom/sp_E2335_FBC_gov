@@ -101,7 +101,6 @@ soup = BeautifulSoup(html, 'lxml')
 
 rows = soup.find('table', "inbodytable").find_all('tr', 'roweven')[1:]
 for row in rows:
-    print row
     try:
         file_name = row.find_all('a')[-1]
     except:
